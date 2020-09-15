@@ -23,17 +23,20 @@ export class MyMath {
 
     add(value) 
     {
-        return this.value + value;
+        this.value = this.value + value;
+        return this;
     }
 
     subtract(value) 
     {
-        return this.value - value;
+        this.value = this.value - value;
+        return this;
     }
 
     multiply(value) 
     {
-        return this.value * value;
+        this.value = this.value * value;
+        return this;
     }
 
     divide(value) 
@@ -41,7 +44,8 @@ export class MyMath {
         if(value === 0)
             return "Durch Null teilen ist verboten!";
         else 
-            return this.value / value;
+        this.value = this.value / value;
+        return this;
     }
 
     pow(pot) 
@@ -53,26 +57,26 @@ export class MyMath {
             let value_buffer = this.value;
             for(let i = 1; i < pot; i++)
             {
-                value_buffer = value_buffer * this.value;
+                this.value = this.value * value_buffer;
             }
 
-            return value_buffer;
+            return this;
         }
     }
 
     faculty() 
     {
-        let value_buffer = this.value;
-        if(value_buffer%1 !== 0 || value_buffer < 0)
+        if(this.value%1 !== 0 || this.value < 0)
             return "Die Fakultät ist nur für natürliche Zahlen definiert!";
         else
         {
+            let value_buffer = this.value;
             for(let i = (value_buffer - 1); i > 1; i--)
             {
-                value_buffer = value_buffer * i;
+                this.value = this.value * i;
             }
             
-            return value_buffer;
+            return this;
         }
     }
 }
