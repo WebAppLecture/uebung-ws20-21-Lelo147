@@ -1,6 +1,5 @@
 body {
     font-family: 'Acme', sans-serif;
-
     background: linear-gradient(to right bottom, rgb(0, 0, 200),rgb(0, 200, 200));
 }
 
@@ -31,6 +30,6 @@ body {
 
 .logo 
 {
-    color: var(--text-color);
-    text-shadow: 0 0 1vh var(--text-color);
+    color: black;
+    text-shadow: 0 0 1vh black;
 }
