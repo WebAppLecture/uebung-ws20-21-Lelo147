@@ -12,6 +12,7 @@ export class Calculator
         this.myNumber = "";
         this.myNumber2 = "";
         this.rechenzeichen = "";
+        this.calc = "";
 
         this.setupNumPad();
     }
@@ -44,20 +45,24 @@ export class Calculator
             
 
         if(number === "+" || number === "-" || number === "*" || number === "/")
+        {
             this.rechenzeichen = number;
+            this.calc += number;
+        }
+            
             
 
         if(Number.isInteger(number_int))
         {
             if(this.rechenzeichen === "")
             {
-                console.log("Hello");
                 this.myNumber += number;
+                this.calc += number;
             }
             else
             {
-                console.log("Ciao");
                 this.myNumber2 += number;
+                this.calc += number;
             }
                           
         }
@@ -68,9 +73,6 @@ export class Calculator
             this.summand = new MyMath(this.myNumber);
             this.summand2 = new MyMath(this.myNumber2);
 
-            console.log(this.summand, this.summand2);
-
-
             switch (this.rechenzeichen)
             {
                 case "+" : this.summand.add(this.summand2); break;
@@ -78,25 +80,23 @@ export class Calculator
                 case "*" : this.summand.multiply(this.summand2); break;
                 case "/" : this.summand.divide(this.summand2); break;
             }
+
+            this.printSolution(this.summand.value);
         }
 
-        console.log(this.summand);
-        
+        this.print(this.calc);    
 
-
-        
-        
-        
     }
+
 
     print(string) 
     {
-        //this.calculation.innerText = "Hallo";
+        this.calculation.innerText = string;
     }
 
     printSolution(string) 
     {
-
+        this.solution.innerText = string;
     }
 
     clear() 
@@ -104,8 +104,12 @@ export class Calculator
         this.myNumber = "";
         this.myNumber2 = "";
         this.rechenzeichen = "";
+        this.calc = "";
         this.summand = new MyMath(0);
         this.summand2 = new MyMath(0);
+
+        this.calculation.innerText = "";
+        this.solution.innerText = "";
     }
 
 }
