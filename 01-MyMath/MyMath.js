@@ -21,41 +21,45 @@ export class MyMath {
             this.value = 0; 
     }
 
-    add(value) 
+
+    add(number) 
     {
-        this.value = this.value + value;
+        this.value = this.value + number.value;
         return this;
     }
 
-    subtract(value) 
+    subtract(number) 
     {
-        this.value = this.value - value;
+        this.value = this.value - number.value;
         return this;
     }
 
-    multiply(value) 
+    multiply(number) 
     {
-        this.value = this.value * value;
+        this.value = this.value * number.value;
         return this;
     }
 
-    divide(value) 
+    divide(number) 
     {
-        if(value === 0)
-            return "Durch Null teilen ist verboten!";
+        if(number === 0)
+        {
+            console.warn("Durch Null teilen ist verboten!");
+        }
         else 
-        this.value = this.value / value;
+            this.value = this.value / number.value;
+
         return this;
     }
 
     pow(pot) 
     {
-        if(pot%1 !== 0 || pot < 0)
+        if(pot.value%1 !== 0 || pot.value < 0)
             return "Der Exponent muss eine natürliche Zahl sein sein!";
         else
         {
             let value_buffer = this.value;
-            for(let i = 1; i < pot; i++)
+            for(let i = 1; i < pot.value; i++)
             {
                 this.value = this.value * value_buffer;
             }

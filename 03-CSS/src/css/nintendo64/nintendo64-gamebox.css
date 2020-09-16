@@ -1,0 +1,36 @@
+body {
+    font-family: 'Acme', sans-serif;
+
+    background: linear-gradient(to right bottom, rgb(0, 0, 200),rgb(0, 200, 200));
+}
+
+.screen,
+.gameBox {
+    border-top-left-radius: 20vh 2vh;
+    border-top-right-radius: 20vh 2vh;
+    border-bottom-left-radius: 20vh 2vh;
+    border-bottom-right-radius: 20vh 2vh;
+}
+
+.gameBox {
+    position: relative;
+    overflow: hidden;
+    margin: .75em auto 0;
+
+
+    background: linear-gradient(
+        -45deg,  
+        var(--light-grey) 33%,
+        var(--grey) 66%, 
+        var(--dark-grey) 100%
+    );
+
+    box-shadow: 0 0 10vh 0 black;
+    
+}
+
+.logo 
+{
+    color: var(--text-color);
+    text-shadow: 0 0 1vh var(--text-color);
+}

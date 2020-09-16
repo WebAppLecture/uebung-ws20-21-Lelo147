@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root 
+{
+    --text-color: rgb(224, 36, 11);
+    --grey: rgb(128, 133, 132);
+    --light-grey: rgb(193, 200, 201);
+    --dark-grey: rgb(85, 85, 85);
+}
