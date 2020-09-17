@@ -42,11 +42,13 @@ export class MyMath {
 
     divide(number) 
     {
-        if(value === 0)
+        if(number.value === 0)
             return "Durch Null teilen ist verboten!";
         else 
-        this.value = this.value / number.value;
-        return this;
+        {
+            this.value = this.value / number.value;
+            return this;
+        }
     }
 
     pow(pot) 
