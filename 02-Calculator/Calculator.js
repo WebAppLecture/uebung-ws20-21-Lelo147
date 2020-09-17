@@ -9,6 +9,7 @@ export class Calculator
         this.numPad = numPad;
         this.calculation = calculation;
         this.solution = solution;
+        /*--------Hier werden Variablen erzeugt, die später zum Rechnen benötigt werden.----------*/
         this.myNumber = "";
         this.myNumber2 = "";
         this.rechenzeichen = "";

@@ -6,4 +6,4 @@ window.Calculator = Calculator; //Fügt die Klasse Calculator zum globalen Names
 let calculation = document.querySelector("#calculation");
 let solution = document.querySelector("#solution");
 
-window.calc = new Calculator(numpad, calculation, solution);
+window.calc = new Calculator(numpad, calculation, solution); //Erzeuge eine neue Instanz von Calculator
