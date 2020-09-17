@@ -6,9 +6,9 @@ export class Snake extends GameTemplate{
 
     start() {
         this.fpsControl = new FpsControl();
-        this.fpsControl.fps = 2;
+        this.fpsControl.fps = 5;
 
-        this.startLength = 10;
+        this.startLength = 2;
         this.headOrientation = Snake.orientations.UP;
         this.nextMove = this.headOrientation;
         this.segments = [];
