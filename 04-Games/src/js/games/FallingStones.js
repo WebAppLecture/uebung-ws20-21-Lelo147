@@ -109,7 +109,7 @@ export class FallingStones extends GameTemplate
 
     createNewStone()
     {
-        let x = Math.random() * 400 - this.stoneWidth;
+        let x = Math.random() * 350;
         let y = -this.stoneHeight;
         let width = this.stoneWidth;
         let height = this.stoneHeight;
@@ -139,7 +139,7 @@ export class FallingStones extends GameTemplate
     {
         this.stones.forEach((stone, index) => 
         {
-            if(MovableGameObject.rectangleCollision(stone, this.player))
+            if(MovableGameObject.rectangleCollision(stone, this.player) || this.life === 0)
             {
                 this.gameOver = true; 
             }
