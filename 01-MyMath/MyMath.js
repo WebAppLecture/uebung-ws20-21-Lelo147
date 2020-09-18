@@ -42,7 +42,7 @@ export class MyMath {
 
     divide(number) 
     {
-        if(number === 0)
+        if(number.value === 0)
         {
             console.warn("Durch Null teilen ist verboten!");
         }
