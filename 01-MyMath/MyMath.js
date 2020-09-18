@@ -11,8 +11,7 @@ export class MyMath {
      * 
      * @param value Unser Initialwert für den Wert von unserer MyMath Instanz.
      */
-    constructor(value) 
-    {
+    constructor(value) {
         // 'this' referenziert den Kontext in dem die aktuelle Funktion aufgerufen wird. 
         // Hier referenziert es die Instanz der Klasse MyMath die wir gerade erstellen.
         // mit 'value * 1' erzwingen wir, dass value als number gelesen wird.
@@ -21,6 +20,7 @@ export class MyMath {
         else
             this.value = 0; 
     }
+
 
     add(number) 
     {
@@ -43,12 +43,13 @@ export class MyMath {
     divide(number) 
     {
         if(number.value === 0)
-            return "Durch Null teilen ist verboten!";
-        else 
         {
-            this.value = this.value / number.value;
-            return this;
+            console.warn("Durch Null teilen ist verboten!");
         }
+        else 
+            this.value = this.value / number.value;
+
+        return this;
     }
 
     pow(pot) 
